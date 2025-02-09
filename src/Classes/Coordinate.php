@@ -16,4 +16,8 @@ class Coordinate {
     public function setValue($value): void {
         $this->value = $value;
     }
+
+    public function __toString(): string {
+        return $this->value;
+    }
 }

@@ -6,7 +6,7 @@ class Point {
     protected Coordinate $x;
     protected Coordinate $y;
 
-    public function __construct(Coordinate|int $x, Coordinate|int $y) {
+    public function __construct(Coordinate|float $x, Coordinate|float $y) {
         $this->setX($x);
         $this->setY($y);
     }
@@ -19,8 +19,8 @@ class Point {
         return $this->y;
     }
 
-    public function setX(Coordinate|int $x): void {
-        if (is_integer($x)) {
+    public function setX(Coordinate|float $x): void {
+        if (is_numeric($x)) {
             $this->x = new Coordinate($x);
 
             return;
@@ -29,8 +29,8 @@ class Point {
         $this->x = $x;
     }
 
-    public function setY(Coordinate|int $y): void {
-        if (is_integer($y)) {
+    public function setY(Coordinate|float $y): void {
+        if (is_numeric($y)) {
             $this->y = new Coordinate($y);
 
             return;
